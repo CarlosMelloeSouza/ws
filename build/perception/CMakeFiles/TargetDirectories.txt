@@ -1,0 +1,9 @@
+/home/carlosmello/ws/build/perception/CMakeFiles/uninstall.dir
+/home/carlosmello/ws/build/perception/CMakeFiles/perception_uninstall.dir
+/home/carlosmello/ws/build/perception/CMakeFiles/test.dir
+/home/carlosmello/ws/build/perception/CMakeFiles/edit_cache.dir
+/home/carlosmello/ws/build/perception/CMakeFiles/rebuild_cache.dir
+/home/carlosmello/ws/build/perception/CMakeFiles/list_install_components.dir
+/home/carlosmello/ws/build/perception/CMakeFiles/install.dir
+/home/carlosmello/ws/build/perception/CMakeFiles/install/local.dir
+/home/carlosmello/ws/build/perception/CMakeFiles/install/strip.dir
