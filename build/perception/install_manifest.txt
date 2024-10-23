@@ -1,6 +1,7 @@
-/home/carlosmello/ws/install/perception/lib/perception/image_subscriber.py
+/home/carlosmello/ws/install/perception/lib/perception/position_estimator.py
 /home/carlosmello/ws/install/perception/lib/perception/__init__.py
 /home/carlosmello/ws/install/perception/lib/perception/cone_detection.py
+/home/carlosmello/ws/install/perception/lib/perception/__init__.py
 /home/carlosmello/ws/install/perception/share/ament_index/resource_index/package_run_dependencies/perception
 /home/carlosmello/ws/install/perception/share/ament_index/resource_index/parent_prefix_path/perception
 /home/carlosmello/ws/install/perception/share/perception/environment/ament_prefix_path.sh

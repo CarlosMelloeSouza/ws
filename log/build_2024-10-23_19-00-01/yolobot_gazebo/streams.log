@@ -1,0 +1,25 @@
+[0.066s] Invoking command in '/home/carlosmello/ws/build/yolobot_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/yolobot_gazebo -- -j8 -l8
+[0.157s] Invoked command in '/home/carlosmello/ws/build/yolobot_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/yolobot_gazebo -- -j8 -l8
+[0.253s] Invoking command in '/home/carlosmello/ws/build/yolobot_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/carlosmello/ws/build/yolobot_gazebo
+[0.300s] -- Install configuration: ""
+[0.305s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo//launch
+[0.305s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo//launch/start_world_launch.py
+[0.306s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo//launch/yolobot_launch.py
+[0.306s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo//worlds
+[0.306s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo//worlds/yolo_test.world
+[0.307s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/ament_index/resource_index/package_run_dependencies/yolobot_gazebo
+[0.307s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/ament_index/resource_index/parent_prefix_path/yolobot_gazebo
+[0.307s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo/environment/ament_prefix_path.sh
+[0.307s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo/environment/ament_prefix_path.dsv
+[0.308s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo/environment/path.sh
+[0.308s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo/environment/path.dsv
+[0.309s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo/local_setup.bash
+[0.311s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo/local_setup.sh
+[0.311s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo/local_setup.zsh
+[0.311s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo/local_setup.dsv
+[0.312s] -- Installing: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo/package.dsv
+[0.312s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/ament_index/resource_index/packages/yolobot_gazebo
+[0.312s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo/cmake/yolobot_gazeboConfig.cmake
+[0.312s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo/cmake/yolobot_gazeboConfig-version.cmake
+[0.313s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_gazebo/share/yolobot_gazebo/package.xml
+[0.345s] Invoked command in '/home/carlosmello/ws/build/yolobot_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/carlosmello/ws/build/yolobot_gazebo

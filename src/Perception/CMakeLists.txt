@@ -9,19 +9,28 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(yolov8_msgs REQUIRED)
+#find_package(fs_msgs REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
 install(
         PROGRAMS
-        ros2/image_subscriber.py
+        ros2/position_estimator.py
         DESTINATION lib/${PROJECT_NAME}
 )
 
 install(
         DIRECTORY
         stereo_camera/
+        DESTINATION lib/${PROJECT_NAME}
+)
+
+install(
+        DIRECTORY
+        position_estimation/
         DESTINATION lib/${PROJECT_NAME}
 )
 
