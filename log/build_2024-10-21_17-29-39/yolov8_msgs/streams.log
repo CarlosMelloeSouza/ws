@@ -1,0 +1,5 @@
+[0.028s] Invoking command in '/home/carlosmello/ws/build/yolov8_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/yolov8_msgs -- -j8 -l8
+[0.054s] [0mCMake Error: The source directory "/home/carlosmello/ws/src/yolov8_ros/yolov8_msgs" does not exist.
+[0.054s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.055s] gmake: *** [Makefile:3123: cmake_check_build_system] Erro 1
+[0.061s] Invoked command in '/home/carlosmello/ws/build/yolov8_msgs' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/yolov8_msgs -- -j8 -l8

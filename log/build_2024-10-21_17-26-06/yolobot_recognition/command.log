@@ -1,0 +1,1 @@
+Invoking command in '/home/carlosmello/ws/build/yolobot_recognition': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/carlosmello/ws/src/yolobot_recognition -DCMAKE_INSTALL_PREFIX=/home/carlosmello/ws/install/yolobot_recognition

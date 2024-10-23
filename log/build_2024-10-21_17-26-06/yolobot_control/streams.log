@@ -1,0 +1,24 @@
+[0.025s] Invoking command in '/home/carlosmello/ws/build/yolobot_control': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/carlosmello/ws/src/yolobot_control -DCMAKE_INSTALL_PREFIX=/home/carlosmello/ws/install/yolobot_control
+[0.103s] -- The C compiler identification is GNU 11.4.0
+[0.269s] -- The CXX compiler identification is GNU 11.4.0
+[0.277s] -- Detecting C compiler ABI info
+[0.361s] -- Detecting C compiler ABI info - done
+[0.369s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.369s] -- Detecting C compile features
+[0.369s] -- Detecting C compile features - done
+[0.372s] -- Detecting CXX compiler ABI info
+[0.468s] -- Detecting CXX compiler ABI info - done
+[0.476s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.476s] -- Detecting CXX compile features
+[0.476s] -- Detecting CXX compile features - done
+[0.478s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.924s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.020s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.114s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.116s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.117s] -- Added test 'lint_cmake' to check CMake code style
+[1.118s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.119s] -- Added test 'xmllint' to check XML markup files
+[1.120s] -- Configuring done
+[1.123s] -- Generating done
+[1.124s] -- Build files have been written to: /home/carlosmello/ws/build/yolobot_control

@@ -1,0 +1,328 @@
+[0.108s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build'][0m
+[0.108s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ac20b6c0610>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ac20b7a58a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ac20b7a58a0>>)[0m
+[0.142s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.142s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.142s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.142s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.142s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.142s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.142s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/carlosmello/ws'
+[0.142s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.142s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.142s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.142s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.142s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.142s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.142s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.142s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.143s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.156s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.156s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.156s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.156s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.156s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.156s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.156s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.156s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[0.157s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[0.158s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[0.158s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/Perception) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/Perception) by extension 'ignore'
+[0.158s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/Perception) by extension 'ignore_ament_install'
+[0.158s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/Perception) by extensions ['colcon_pkg']
+[0.158s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/Perception) by extension 'colcon_pkg'
+[0.158s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/Perception) by extensions ['colcon_meta']
+[0.158s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/Perception) by extension 'colcon_meta'
+[0.158s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/Perception) by extensions ['ros']
+[0.158s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/Perception) by extension 'ros'
+[0.160s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/Perception' with type 'ros.ament_cmake' and name 'perception'[0m
+[0.160s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros) by extension 'ignore'
+[0.160s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros) by extension 'ignore_ament_install'
+[0.160s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros) by extensions ['colcon_pkg']
+[0.160s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros) by extension 'colcon_pkg'
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros) by extensions ['colcon_meta']
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros) by extension 'colcon_meta'
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros) by extensions ['ros']
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros) by extension 'ros'
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros) by extensions ['cmake', 'python']
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros) by extension 'cmake'
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros) by extension 'python'
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros) by extensions ['python_setup_py']
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros) by extension 'python_setup_py'
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/docs) by extension 'ignore'
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/docs) by extension 'ignore_ament_install'
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/docs) by extensions ['colcon_pkg']
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/docs) by extension 'colcon_pkg'
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/docs) by extensions ['colcon_meta']
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/docs) by extension 'colcon_meta'
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/docs) by extensions ['ros']
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/docs) by extension 'ros'
+[0.161s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/docs) by extensions ['cmake', 'python']
+[0.162s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/docs) by extension 'cmake'
+[0.162s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/docs) by extension 'python'
+[0.162s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/docs) by extensions ['python_setup_py']
+[0.162s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/docs) by extension 'python_setup_py'
+[0.162s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.162s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_bringup) by extension 'ignore'
+[0.162s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_bringup) by extension 'ignore_ament_install'
+[0.162s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_bringup) by extensions ['colcon_pkg']
+[0.162s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_bringup) by extension 'colcon_pkg'
+[0.162s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_bringup) by extensions ['colcon_meta']
+[0.162s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_bringup) by extension 'colcon_meta'
+[0.162s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_bringup) by extensions ['ros']
+[0.162s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_bringup) by extension 'ros'
+[0.163s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/yolov8_ros/yolov8_bringup' with type 'ros.ament_cmake' and name 'yolov8_bringup'[0m
+[0.163s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.163s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_msgs) by extension 'ignore'
+[0.163s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_msgs) by extension 'ignore_ament_install'
+[0.163s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_msgs) by extensions ['colcon_pkg']
+[0.163s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_msgs) by extension 'colcon_pkg'
+[0.163s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_msgs) by extensions ['colcon_meta']
+[0.163s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_msgs) by extension 'colcon_meta'
+[0.163s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_msgs) by extensions ['ros']
+[0.163s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_msgs) by extension 'ros'
+[0.164s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/yolov8_ros/yolov8_msgs' with type 'ros.ament_cmake' and name 'yolov8_msgs'[0m
+[0.164s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_ros) by extension 'ignore'
+[0.164s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_ros) by extension 'ignore_ament_install'
+[0.164s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_ros) by extensions ['colcon_pkg']
+[0.164s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_ros) by extension 'colcon_pkg'
+[0.164s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_ros) by extensions ['colcon_meta']
+[0.165s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_ros) by extension 'colcon_meta'
+[0.165s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_ros) by extensions ['ros']
+[0.165s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolov8_ros/yolov8_ros) by extension 'ros'
+[0.165s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/yolov8_ros/yolov8_ros' with type 'ros.ament_python' and name 'yolov8_ros'[0m
+[0.165s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.165s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.165s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.165s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.166s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.180s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[0.180s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[0.182s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 323 installed packages in /opt/ros/humble[0m
+[0.184s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[0.225s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'perception' build argument 'cmake_args' from command line to 'None'
+[0.225s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'perception' build argument 'cmake_target' from command line to 'None'
+[0.225s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'perception' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.225s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'perception' build argument 'cmake_clean_cache' from command line to 'False'
+[0.225s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'perception' build argument 'cmake_clean_first' from command line to 'False'
+[0.225s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'perception' build argument 'cmake_force_configure' from command line to 'False'
+[0.225s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'perception' build argument 'ament_cmake_args' from command line to 'None'
+[0.225s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'perception' build argument 'catkin_cmake_args' from command line to 'None'
+[0.225s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'perception' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.225s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'perception' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/carlosmello/ws/build/perception', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/carlosmello/ws/install/perception', 'merge_install': False, 'path': '/home/carlosmello/ws/src/Perception', 'symlink_install': False, 'test_result_base': None}[0m
+[0.225s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_msgs' build argument 'cmake_args' from command line to 'None'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_msgs' build argument 'cmake_target' from command line to 'None'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'yolov8_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/carlosmello/ws/build/yolov8_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/carlosmello/ws/install/yolov8_msgs', 'merge_install': False, 'path': '/home/carlosmello/ws/src/yolov8_ros/yolov8_msgs', 'symlink_install': False, 'test_result_base': None}[0m
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_ros' build argument 'cmake_args' from command line to 'None'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_ros' build argument 'cmake_target' from command line to 'None'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_ros' build argument 'cmake_clean_first' from command line to 'False'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_ros' build argument 'cmake_force_configure' from command line to 'False'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_ros' build argument 'ament_cmake_args' from command line to 'None'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.226s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'yolov8_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/carlosmello/ws/build/yolov8_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/carlosmello/ws/install/yolov8_ros', 'merge_install': False, 'path': '/home/carlosmello/ws/src/yolov8_ros/yolov8_ros', 'symlink_install': False, 'test_result_base': None}[0m
+[0.227s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_bringup' build argument 'cmake_args' from command line to 'None'
+[0.227s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_bringup' build argument 'cmake_target' from command line to 'None'
+[0.227s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.227s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.227s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.227s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.227s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.227s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.227s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolov8_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.227s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'yolov8_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/carlosmello/ws/build/yolov8_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/carlosmello/ws/install/yolov8_bringup', 'merge_install': False, 'path': '/home/carlosmello/ws/src/yolov8_ros/yolov8_bringup', 'symlink_install': False, 'test_result_base': None}[0m
+[0.227s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.228s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.228s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/carlosmello/ws/src/yolov8_ros/yolov8_msgs' with build type 'ament_cmake'
+[0.229s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/carlosmello/ws/src/yolov8_ros/yolov8_msgs'
+[0.231s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.231s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.231s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.233s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/carlosmello/ws/src/Perception' with build type 'ament_cmake'
+[0.234s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/carlosmello/ws/src/Perception'
+[0.234s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.234s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.242s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/carlosmello/ws/build/yolov8_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/yolov8_msgs -- -j8 -l8[0m
+[0.245s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/carlosmello/ws/build/perception': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/perception -- -j8 -l8[0m
+[0.279s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/carlosmello/ws/build/perception' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/perception -- -j8 -l8[0m
+[0.327s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/carlosmello/ws/build/perception': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/carlosmello/ws/build/perception[0m
+[0.338s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(perception)
+[0.340s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/carlosmello/ws/build/perception' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/carlosmello/ws/build/perception[0m
+[0.342s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/perception' for CMake module files
+[0.342s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/perception' for CMake config files
+[0.343s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('perception', 'cmake_prefix_path')
+[0.343s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/carlosmello/ws/install/perception/share/perception/hook/cmake_prefix_path.ps1'
+[0.344s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/carlosmello/ws/install/perception/share/perception/hook/cmake_prefix_path.dsv'
+[0.344s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/carlosmello/ws/install/perception/share/perception/hook/cmake_prefix_path.sh'
+[0.346s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/perception/lib'
+[0.346s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/perception/bin'
+[0.346s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/perception/lib/pkgconfig/perception.pc'
+[0.346s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/perception/lib/python3.10/site-packages'
+[0.346s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/perception/bin'
+[0.347s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/perception/share/perception/package.ps1'
+[0.347s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/carlosmello/ws/install/perception/share/perception/package.dsv'
+[0.348s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/perception/share/perception/package.sh'
+[0.349s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/perception/share/perception/package.bash'
+[0.350s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/perception/share/perception/package.zsh'
+[0.350s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/carlosmello/ws/install/perception/share/colcon-core/packages/perception)
+[0.369s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(perception)
+[0.370s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/perception' for CMake module files
+[0.370s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/perception' for CMake config files
+[0.370s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('perception', 'cmake_prefix_path')
+[0.371s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/carlosmello/ws/install/perception/share/perception/hook/cmake_prefix_path.ps1'
+[0.371s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/carlosmello/ws/install/perception/share/perception/hook/cmake_prefix_path.dsv'
+[0.371s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/carlosmello/ws/install/perception/share/perception/hook/cmake_prefix_path.sh'
+[0.372s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/perception/lib'
+[0.372s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/perception/bin'
+[0.372s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/perception/lib/pkgconfig/perception.pc'
+[0.372s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/perception/lib/python3.10/site-packages'
+[0.373s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/perception/bin'
+[0.373s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/perception/share/perception/package.ps1'
+[0.374s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/carlosmello/ws/install/perception/share/perception/package.dsv'
+[0.374s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/perception/share/perception/package.sh'
+[0.375s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/perception/share/perception/package.bash'
+[0.375s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/perception/share/perception/package.zsh'
+[0.376s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/carlosmello/ws/install/perception/share/colcon-core/packages/perception)
+[0.696s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/carlosmello/ws/build/yolov8_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/yolov8_msgs -- -j8 -l8[0m
+[0.917s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/carlosmello/ws/build/yolov8_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/carlosmello/ws/build/yolov8_msgs[0m
+[0.978s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(yolov8_msgs)
+[0.979s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/yolov8_msgs' for CMake module files
+[0.979s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/carlosmello/ws/build/yolov8_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/carlosmello/ws/build/yolov8_msgs[0m
+[0.979s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/yolov8_msgs' for CMake config files
+[0.980s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('yolov8_msgs', 'cmake_prefix_path')
+[0.980s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/hook/cmake_prefix_path.ps1'
+[0.981s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/hook/cmake_prefix_path.dsv'
+[0.981s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/hook/cmake_prefix_path.sh'
+[0.981s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/yolov8_msgs/lib'
+[0.982s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('yolov8_msgs', 'ld_library_path_lib')
+[0.982s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/hook/ld_library_path_lib.ps1'
+[0.982s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/hook/ld_library_path_lib.dsv'
+[0.982s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/hook/ld_library_path_lib.sh'
+[0.983s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/yolov8_msgs/bin'
+[0.983s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/yolov8_msgs/lib/pkgconfig/yolov8_msgs.pc'
+[0.983s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/yolov8_msgs/lib/python3.10/site-packages'
+[0.984s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/yolov8_msgs/bin'
+[0.984s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/package.ps1'
+[0.984s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/package.dsv'
+[0.985s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/package.sh'
+[0.985s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/package.bash'
+[0.986s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/package.zsh'
+[0.986s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/carlosmello/ws/install/yolov8_msgs/share/colcon-core/packages/yolov8_msgs)
+[1.194s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(yolov8_msgs)
+[1.195s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/yolov8_msgs' for CMake module files
+[1.195s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/yolov8_msgs' for CMake config files
+[1.196s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('yolov8_msgs', 'cmake_prefix_path')
+[1.196s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/hook/cmake_prefix_path.ps1'
+[1.197s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/hook/cmake_prefix_path.dsv'
+[1.197s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/hook/cmake_prefix_path.sh'
+[1.198s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/yolov8_msgs/lib'
+[1.198s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('yolov8_msgs', 'ld_library_path_lib')
+[1.198s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/hook/ld_library_path_lib.ps1'
+[1.198s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/hook/ld_library_path_lib.dsv'
+[1.199s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/hook/ld_library_path_lib.sh'
+[1.199s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/yolov8_msgs/bin'
+[1.199s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/yolov8_msgs/lib/pkgconfig/yolov8_msgs.pc'
+[1.200s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/yolov8_msgs/lib/python3.10/site-packages'
+[1.200s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/carlosmello/ws/install/yolov8_msgs/bin'
+[1.200s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/package.ps1'
+[1.201s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/package.dsv'
+[1.201s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/package.sh'
+[1.202s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/package.bash'
+[1.202s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/package.zsh'
+[1.202s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/carlosmello/ws/install/yolov8_msgs/share/colcon-core/packages/yolov8_msgs)
+[1.203s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/carlosmello/ws/src/yolov8_ros/yolov8_ros' with build type 'ament_python'
+[1.203s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('yolov8_ros', 'ament_prefix_path')
+[1.203s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/carlosmello/ws/install/yolov8_ros/share/yolov8_ros/hook/ament_prefix_path.ps1'
+[1.204s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/carlosmello/ws/install/yolov8_ros/share/yolov8_ros/hook/ament_prefix_path.dsv'
+[1.205s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/carlosmello/ws/install/yolov8_ros/share/yolov8_ros/hook/ament_prefix_path.sh'
+[1.205s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.205s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.418s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/carlosmello/ws/src/yolov8_ros/yolov8_ros'
+[1.419s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.419s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.841s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[1.841s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[1.841s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with 'Expected ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', '--help-commands'] to pass: /home/carlosmello/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/home/carlosmello/ws/src/yolov8_ros/yolov8_ros/setup.py", line 5, in <module>
+    setup(
+  File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 117, in setup
+    return distutils.core.setup(**attrs)
+  File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 170, in setup
+    ok = dist.parse_command_line()
+  File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 469, in parse_command_line
+    if self.handle_display_options(option_order):
+  File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/dist.py", line 926, in handle_display_options
+    return _Distribution.handle_display_options(self, option_order)
+  File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 683, in handle_display_options
+    self.print_commands()
+  File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/dist.py", line 705, in print_commands
+    cmdclass = ep.load()
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 171, in load
+    module = import_module(match.group('module'))
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/carlosmello/.local/lib/python3.10/site-packages/sphinx/setup_command.py", line 21, in <module>
+    from sphinx.application import Sphinx
+  File "/home/carlosmello/.local/lib/python3.10/site-packages/sphinx/application.py", line 31, in <module>
+    from sphinx.config import Config
+  File "/home/carlosmello/.local/lib/python3.10/site-packages/sphinx/config.py", line 21, in <module>
+    from sphinx.util import logging
+  File "/home/carlosmello/.local/lib/python3.10/site-packages/sphinx/util/__init__.py", line 41, in <module>
+    from sphinx.util.typing import PathMatcher
+  File "/home/carlosmello/.local/lib/python3.10/site-packages/sphinx/util/typing.py", line 37, in <module>
+    from types import Union as types_Union
+ImportError: cannot import name 'Union' from 'types' (/usr/lib/python3.10/types.py)
+'[0m
+[1.841s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[1.846s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.846s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.847s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[1.857s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[1.858s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/carlosmello/ws/install/local_setup.ps1'
+[1.860s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/carlosmello/ws/install/_local_setup_util_ps1.py'
+[1.862s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/carlosmello/ws/install/setup.ps1'
+[1.863s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/carlosmello/ws/install/local_setup.sh'
+[1.864s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/carlosmello/ws/install/_local_setup_util_sh.py'
+[1.865s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/carlosmello/ws/install/setup.sh'
+[1.866s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/carlosmello/ws/install/local_setup.bash'
+[1.867s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/carlosmello/ws/install/setup.bash'
+[1.867s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/carlosmello/ws/install/local_setup.zsh'
+[1.868s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/carlosmello/ws/install/setup.zsh'

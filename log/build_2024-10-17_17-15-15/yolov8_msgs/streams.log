@@ -1,0 +1,96 @@
+[0.010s] Invoking command in '/home/carlosmello/ws/build/yolov8_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/carlosmello/ws/src/yolov8_ros/yolov8_msgs -DCMAKE_INSTALL_PREFIX=/home/carlosmello/ws/install/yolov8_msgs
+[0.129s] -- The C compiler identification is GNU 11.4.0
+[0.230s] -- The CXX compiler identification is GNU 11.4.0
+[0.239s] -- Detecting C compiler ABI info
+[0.302s] -- Detecting C compiler ABI info - done
+[0.310s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.310s] -- Detecting C compile features
+[0.311s] -- Detecting C compile features - done
+[0.314s] -- Detecting CXX compiler ABI info
+[0.387s] -- Detecting CXX compiler ABI info - done
+[0.394s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.395s] -- Detecting CXX compile features
+[0.395s] -- Detecting CXX compile features - done
+[0.398s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.780s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.873s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.877s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.883s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.926s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.960s] -- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+[0.986s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.340s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.595s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.928s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.949s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.951s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.975s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.975s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.975s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.976s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.997s] -- Found PythonExtra: .so  
+[2.067s] -- Configuring done
+[2.116s] -- Generating done
+[2.118s] -- Build files have been written to: /home/carlosmello/ws/build/yolov8_msgs
+[2.127s] Invoked command in '/home/carlosmello/ws/build/yolov8_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/carlosmello/ws/src/yolov8_ros/yolov8_msgs -DCMAKE_INSTALL_PREFIX=/home/carlosmello/ws/install/yolov8_msgs
+[2.129s] Invoking command in '/home/carlosmello/ws/build/yolov8_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/yolov8_msgs -- -j8 -l8
+[2.165s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.174s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.181s] [  1%] Built target ament_cmake_python_copy_yolov8_msgs
+[2.421s] running egg_info
+[2.442s] creating yolov8_msgs.egg-info
+[2.442s] writing yolov8_msgs.egg-info/PKG-INFO
+[2.442s] writing dependency_links to yolov8_msgs.egg-info/dependency_links.txt
+[2.443s] writing top-level names to yolov8_msgs.egg-info/top_level.txt
+[2.443s] writing manifest file 'yolov8_msgs.egg-info/SOURCES.txt'
+[2.504s] reading manifest file 'yolov8_msgs.egg-info/SOURCES.txt'
+[2.518s] Traceback (most recent call last):
+[2.518s]   File "/home/carlosmello/ws/build/yolov8_msgs/ament_cmake_python/yolov8_msgs/setup.py", line 4, in <module>
+[2.518s]     setup(
+[2.518s]   File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 117, in setup
+[2.518s]     return distutils.core.setup(**attrs)
+[2.518s]   File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 183, in setup
+[2.519s]     return run_commands(dist)
+[2.519s]   File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 199, in run_commands
+[2.519s]     dist.run_commands()
+[2.519s]   File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 954, in run_commands
+[2.519s]     self.run_command(cmd)
+[2.519s]   File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/dist.py", line 991, in run_command
+[2.519s]     super().run_command(command)
+[2.519s]   File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 973, in run_command
+[2.519s]     cmd_obj.run()
+[2.519s]   File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 315, in run
+[2.519s]     self.find_sources()
+[2.519s]   File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 323, in find_sources
+[2.519s]     mm.run()
+[2.520s]   File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 549, in run
+[2.520s]     self.prune_file_list()
+[2.520s]   File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/command/sdist.py", line 161, in prune_file_list
+[2.520s]     super().prune_file_list()
+[2.520s]   File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/_distutils/command/sdist.py", line 380, in prune_file_list
+[2.520s]     base_dir = self.distribution.get_fullname()
+[2.520s]   File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/_core_metadata.py", line 267, in get_fullname
+[2.520s]     return _distribution_fullname(self.get_name(), self.get_version())
+[2.520s]   File "/home/carlosmello/.local/lib/python3.10/site-packages/setuptools/_core_metadata.py", line 285, in _distribution_fullname
+[2.520s]     canonicalize_version(version, strip_trailing_zero=False),
+[2.520s] TypeError: canonicalize_version() got an unexpected keyword argument 'strip_trailing_zero'
+[2.547s] gmake[2]: *** [CMakeFiles/ament_cmake_python_build_yolov8_msgs_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_yolov8_msgs_egg] Erro 1
+[2.547s] gmake[1]: *** [CMakeFiles/Makefile2:447: CMakeFiles/ament_cmake_python_build_yolov8_msgs_egg.dir/all] Erro 2
+[2.547s] gmake[1]: ** Esperando que outros processos terminem.
+[3.142s] [  1%] Built target yolov8_msgs__cpp
+[3.249s] [  4%] [32mBuilding C object CMakeFiles/yolov8_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolov8_msgs/msg/detail/vector2__functions.c.o[0m
+[3.249s] [  4%] [32mBuilding C object CMakeFiles/yolov8_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolov8_msgs/msg/detail/bounding_box2_d__functions.c.o[0m
+[3.250s] [  6%] [32mBuilding C object CMakeFiles/yolov8_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolov8_msgs/msg/detail/bounding_box3_d__functions.c.o[0m
+[3.250s] [  6%] [32mBuilding C object CMakeFiles/yolov8_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolov8_msgs/msg/detail/mask__functions.c.o[0m
+[3.250s] [  7%] [32mBuilding C object CMakeFiles/yolov8_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolov8_msgs/msg/detail/key_point2_d__functions.c.o[0m
+[3.250s] [  8%] [32mBuilding C object CMakeFiles/yolov8_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolov8_msgs/msg/detail/key_point2_d_array__functions.c.o[0m
+[3.250s] [  4%] [32mBuilding C object CMakeFiles/yolov8_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolov8_msgs/msg/detail/point2_d__functions.c.o[0m
+[3.250s] [  4%] [32mBuilding C object CMakeFiles/yolov8_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolov8_msgs/msg/detail/pose2_d__functions.c.o[0m
+[3.327s] [  9%] [32mBuilding C object CMakeFiles/yolov8_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolov8_msgs/msg/detail/key_point3_d_array__functions.c.o[0m
+[3.327s] [ 10%] [32mBuilding C object CMakeFiles/yolov8_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolov8_msgs/msg/detail/detection__functions.c.o[0m
+[3.327s] [ 11%] [32mBuilding C object CMakeFiles/yolov8_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolov8_msgs/msg/detail/key_point3_d__functions.c.o[0m
+[3.327s] [ 11%] [32mBuilding C object CMakeFiles/yolov8_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolov8_msgs/msg/detail/detection_array__functions.c.o[0m
+[3.374s] [ 12%] [32m[1mLinking C shared library libyolov8_msgs__rosidl_generator_c.so[0m
+[3.411s] [ 12%] Built target yolov8_msgs__rosidl_generator_c
+[3.412s] gmake: *** [Makefile:146: all] Erro 2
+[3.413s] Invoked command in '/home/carlosmello/ws/build/yolov8_msgs' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/yolov8_msgs -- -j8 -l8

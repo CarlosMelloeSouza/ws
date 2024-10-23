@@ -1,0 +1,2 @@
+Invoking command in '/home/carlosmello/ws/build/yolov8_msgs': /usr/bin/cmake --build /home/carlosmello/ws/build/yolov8_msgs -- -j8 -l8
+Invoked command in '/home/carlosmello/ws/build/yolov8_msgs' returned '2': /usr/bin/cmake --build /home/carlosmello/ws/build/yolov8_msgs -- -j8 -l8
