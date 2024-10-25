@@ -5,7 +5,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
-from cone_detection import ConeDetection
+#from cone_detection import ConeDetection
 
 yoloPath="a"
 
@@ -21,7 +21,7 @@ class ImageSubscriber(Node):
             10)
         self.subscription  # prevent unused variable warning
         self.br = CvBridge()
-        self.stereo=ConeDetection(yoloPath)
+        #self.stereo=ConeDetection(yoloPath)
 
     def listener_callback(self, msg):
         self.get_logger().info('I heard: "%d"' % msg.width)
@@ -33,7 +33,7 @@ class ImageSubscriber(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    image_subscriber = ImageSubscriber(yolopath)
+    image_subscriber = ImageSubscriber()
 
     rclpy.spin(image_subscriber)
 

@@ -1,0 +1,6 @@
+[31mCMake Error at CMakeLists.txt:31 (install):
+  install DIRECTORY given non-directory
+  "position_estimation/stereo_pipeline.py" to install.
+
+[0m
+gmake: *** [Makefile:226: cmake_check_build_system] Erro 1

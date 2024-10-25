@@ -3,7 +3,7 @@
 from ultralytics import YOLO
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import Image
+from sensor_msgs.msg import Image, CameraInfo
 from cv_bridge import CvBridge
 
 from message_filters import Subscriber, ApproximateTimeSynchronizer
@@ -21,8 +21,9 @@ class PositionEstimator(Node):
         self.detections_sub = Subscriber(self, Yolov8Inference, "/Yolov8_Inference")
         self.image_left_sub = Subscriber(self, Image, "/fsds/cameracam1/image_color")
         self.image_right_sub = Subscriber(self, Image, "/fsds/cameracam2/image_color")
+        self.camera_left_info_sub = Subscriber(self, CameraInfo, "/fsds/cameracam1/camera_info")
         queue_size = 10
-        max_delay = 0.05
+        max_delay = 0.015
         self.time_sync = ApproximateTimeSynchronizer([self.image_left_sub,self.image_right_sub,self.detections_sub],queue_size,max_delay)
         self.time_sync.registerCallback(self.sync_callback)
 
@@ -30,7 +31,7 @@ class PositionEstimator(Node):
         img_left_temp = img_left.header.stamp.sec
         img_right_temp = img_right.header.stamp.sec
         det_temp = det.header.stamp.sec
-        self.get_logger().info(f'Sync callback with {img_left_temp} and {img_right_temp} as times')
+        self.get_logger().info(f'Sync callback with {img_left_temp} , {img_right_temp} and {det_temp} as times')
         
     
     

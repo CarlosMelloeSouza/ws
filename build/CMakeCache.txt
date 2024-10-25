@@ -238,7 +238,7 @@ Python3_EXECUTABLE:FILEPATH=/usr/bin/python3
 SITE:STRING=ampera-H81M-S2PV
 
 //Path to a library.
-_lib:FILEPATH=/opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
+_lib:FILEPATH=/home/carlosmello/ws/install/yolov8_msgs/lib/libyolov8_msgs__rosidl_typesupport_fastrtps_cpp.so
 
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/humble/share/ament_cmake/cmake
@@ -412,7 +412,7 @@ std_msgs_DIR:PATH=/opt/ros/humble/share/std_msgs/cmake
 xmllint_BIN:FILEPATH=/usr/bin/xmllint
 
 //The directory containing a CMake configuration file for yolov8_msgs.
-yolov8_msgs_DIR:PATH=yolov8_msgs_DIR-NOTFOUND
+yolov8_msgs_DIR:PATH=/home/carlosmello/ws/install/yolov8_msgs/share/yolov8_msgs/cmake
 
 
 ########################

@@ -1,0 +1,2 @@
+Invoking command in '/home/carlosmello/ws/build/perception': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/perception -- -j8 -l8
+Invoked command in '/home/carlosmello/ws/build/perception' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/perception -- -j8 -l8
