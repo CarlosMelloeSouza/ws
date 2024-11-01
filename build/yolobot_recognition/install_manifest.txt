@@ -1,10 +1,7 @@
-/home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/.dockerignore
-/home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/yolov8_ros2_subscriber.py
-/home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/best_nano.pt
-/home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/.gitattributes
-/home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/best.pt
-/home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/yolov8n.pt
 /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/.gitignore
+/home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/yolov8_ros2_subscriber.py
+/home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/.gitattributes
+/home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/.dockerignore
 /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/yolov8_ros2_pt.py
 /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//launch/launch_yolov8.launch.py
 /home/carlosmello/ws/install/yolobot_recognition/lib/yolobot_recognition/yolov8_ros2_pt.py

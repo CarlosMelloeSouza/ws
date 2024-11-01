@@ -1,0 +1,36 @@
+[0.022s] Invoking command in '/home/carlosmello/ws/build/yolobot_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/yolobot_control -- -j8 -l8
+[0.077s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.219s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.300s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.301s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.302s] -- Added test 'lint_cmake' to check CMake code style
+[0.302s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.303s] -- Added test 'xmllint' to check XML markup files
+[0.305s] -- Configuring done
+[0.311s] -- Generating done
+[0.311s] -- Build files have been written to: /home/carlosmello/ws/build/yolobot_control
+[0.335s] Invoked command in '/home/carlosmello/ws/build/yolobot_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/yolobot_control -- -j8 -l8
+[0.364s] Invoking command in '/home/carlosmello/ws/build/yolobot_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/carlosmello/ws/build/yolobot_control
+[0.375s] -- Install configuration: ""
+[0.375s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control//scripts
+[0.376s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control//scripts/robot_control.py
+[0.376s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control//launch
+[0.376s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control//launch/yolobot_control.launch.py
+[0.376s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/lib/yolobot_control/robot_control.py
+[0.376s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/lib/yolobot_control/yolobot_control.launch.py
+[0.376s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/share/ament_index/resource_index/package_run_dependencies/yolobot_control
+[0.376s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/share/ament_index/resource_index/parent_prefix_path/yolobot_control
+[0.376s] -- Installing: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control/environment/ament_prefix_path.sh
+[0.376s] -- Installing: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control/environment/ament_prefix_path.dsv
+[0.376s] -- Installing: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control/environment/path.sh
+[0.376s] -- Installing: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control/environment/path.dsv
+[0.377s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control/local_setup.bash
+[0.377s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control/local_setup.sh
+[0.377s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control/local_setup.zsh
+[0.377s] -- Installing: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control/local_setup.dsv
+[0.377s] -- Installing: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control/package.dsv
+[0.377s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/share/ament_index/resource_index/packages/yolobot_control
+[0.378s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control/cmake/yolobot_controlConfig.cmake
+[0.378s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control/cmake/yolobot_controlConfig-version.cmake
+[0.378s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_control/share/yolobot_control/package.xml
+[0.397s] Invoked command in '/home/carlosmello/ws/build/yolobot_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/carlosmello/ws/build/yolobot_control

@@ -1,0 +1,41 @@
+[0.023s] Invoking command in '/home/carlosmello/ws/build/yolobot_recognition': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/yolobot_recognition -- -j8 -l8
+[0.066s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.253s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.326s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.328s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.329s] -- Added test 'lint_cmake' to check CMake code style
+[0.330s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.331s] -- Added test 'xmllint' to check XML markup files
+[0.333s] -- Configuring done
+[0.337s] -- Generating done
+[0.338s] -- Build files have been written to: /home/carlosmello/ws/build/yolobot_recognition
+[0.361s] Invoked command in '/home/carlosmello/ws/build/yolobot_recognition' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carlosmello/ws/build/yolobot_recognition -- -j8 -l8
+[0.386s] Invoking command in '/home/carlosmello/ws/build/yolobot_recognition': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/carlosmello/ws/build/yolobot_recognition
+[0.394s] -- Install configuration: ""
+[0.394s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts
+[0.394s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/.gitignore
+[0.394s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/yolov8_ros2_subscriber.py
+[0.395s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/.gitattributes
+[0.395s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/.dockerignore
+[0.395s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//scripts/yolov8_ros2_pt.py
+[0.395s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//launch
+[0.395s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition//launch/launch_yolov8.launch.py
+[0.395s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/lib/yolobot_recognition/yolov8_ros2_pt.py
+[0.395s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/lib/yolobot_recognition/yolov8_ros2_subscriber.py
+[0.395s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/lib/yolobot_recognition/launch_yolov8.launch.py
+[0.396s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/ament_index/resource_index/package_run_dependencies/yolobot_recognition
+[0.396s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/ament_index/resource_index/parent_prefix_path/yolobot_recognition
+[0.396s] -- Installing: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition/environment/ament_prefix_path.sh
+[0.396s] -- Installing: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition/environment/ament_prefix_path.dsv
+[0.396s] -- Installing: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition/environment/path.sh
+[0.396s] -- Installing: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition/environment/path.dsv
+[0.396s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition/local_setup.bash
+[0.397s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition/local_setup.sh
+[0.397s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition/local_setup.zsh
+[0.397s] -- Installing: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition/local_setup.dsv
+[0.397s] -- Installing: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition/package.dsv
+[0.397s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/ament_index/resource_index/packages/yolobot_recognition
+[0.398s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition/cmake/yolobot_recognitionConfig.cmake
+[0.398s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition/cmake/yolobot_recognitionConfig-version.cmake
+[0.399s] -- Up-to-date: /home/carlosmello/ws/install/yolobot_recognition/share/yolobot_recognition/package.xml
+[0.401s] Invoked command in '/home/carlosmello/ws/build/yolobot_recognition' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/carlosmello/ws/build/yolobot_recognition
