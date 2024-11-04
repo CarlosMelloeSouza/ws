@@ -18,6 +18,8 @@ class PositionEstimator(Node):
 
     def __init__(self):
         super().__init__('position_estimator')
+
+        #<-- aqui mais ou menos tem que iniciar a classe da camera
         self.detections_sub = Subscriber(self, Yolov8Inference, "/Yolov8_Inference")
         self.image_left_sub = Subscriber(self, Image, "/fsds/cameracam1/image_color")
         self.image_right_sub = Subscriber(self, Image, "/fsds/cameracam2/image_color")
@@ -33,6 +35,7 @@ class PositionEstimator(Node):
         det_temp = det.header.stamp.sec
         cv2img_left=bridge.cv2_to_imgmsg(img_left, desired_encoding='passthrough')
         cv2img_right=bridge.cv2_to_imgmsg(img_right)
+        #<-- e aqui mais ou menos tem que chamar a funçao da classe da camera que estima a posiçao 
         self.get_logger().info(f'Sync callback with {img_left_temp} , {img_right_temp} and {det_temp} as times')
         
     

@@ -3,6 +3,7 @@ import torch.nn as nn
 import numpy as np
 import torch
 from ultralytics import YOLO
+from torchvision import transforms
 
 class KeypointsEstimator:
     def __init__(self,camera_info,keypoints_path,yolo):
@@ -11,6 +12,7 @@ class KeypointsEstimator:
         self.model_keypoints.eval()
         self.model_keypoints.cuda()
         self.object3D_points = np.array([[0.0,0.0 , 227.0], [0.0, -37.0, 144.0], [0.0, 37.0, 144.0], [0.0, -48.0, 78.0], [0.0, 48.0, 78.0], [0.0, -60.0, 0.0], [0.0, 60.0, 0.0]], dtype=np.float32)
+        self.camera_intrinsics=camera_info #garantir que seja de fato os intrisicos da camera
     
     
     def get_image_keypoints(self,boundingbox_list,image):
@@ -21,7 +23,7 @@ class KeypointsEstimator:
             x2,y2 = int(box[2]),int(box[3])
             crop = image[y1:y2,x1:x2]
             imagem_redimencionada=cv2.resize(crop,(80,80))
-            im = Image.fromarray(cv2.cvtColor(imagem_redimencionada, cv2.COLOR_BGR2RGB))
+            im = image.fromarray(cv2.cvtColor(imagem_redimencionada, cv2.COLOR_BGR2RGB))
             test_transforms = transforms.Compose([transforms.Resize((80, 80)), transforms.ToTensor()])
             im = test_transforms(im)
             pytorch_image = im.unsqueeze(0).to('cuda')
@@ -40,9 +42,65 @@ class KeypointsEstimator:
             keypoints_list.append(xy_imag)
         return keypoints_list
 
+    def get_boxes(self,result_f):
+        boundingbox_list=[]
+        conf_list=[]
+        label_list=[]
+        for l in result_f:
+            boxes = l.boxes
+            
+            for box in boxes:
+                
+                boundingbox_list.append(box.xyxy[0])
+                conf_list.append(box.conf[0])
+                label_list.append(box.cls[0])
+        
+        self.boundingbox_list=boundingbox_list
+        return boundingbox_list,conf_list,label_list
+
+    def get_position_estimation(self, image):
+        cameraMatrix = self.camera_intrinsics
+        bounding_boxes = self.yolo_model.predict(image)
+
+        boundingbox_list,conf_list,label_list = self.get_boxes(bounding_boxes)
+        keypoints = self.get_image_keypoints(boundingbox_list,image)
+        cameraMatrix = np.array(cameraMatrix, dtype=np.float32)
+
+        obstacles = list()
+        rvec_list=[]
+        tvec_list=[]
+        
+        
+        for i,objects in enumerate(keypoints):
+            
+            xy_imag = np.array([objects], dtype=np.float32)
+            funciona,rvec,tvec= cv2.solvePnP(self.object3D_points, xy_imag, cameraMatrix, np.array(self.distortion),flags=0)
+            obstacles.append(Obstacle(tvec[0][0],tvec[2][0],conf_list[i].item(),label_list[i].item())) 
+            rvec_list.append(rvec)
+            tvec_list.append(tvec)
+            
+            
+            
+        timing=self.get_timing()
+        return obstacles,timing,rvec_list,tvec_list
 
 
 
+
+
+
+
+
+class Obstacle:
+
+    def __init__(self, x, y, confidence, label,deviation=1e-15, count=1, id=0):
+        self.x = x
+        self.y = y
+        self.confidence = confidence
+        self.label = label
+        self.count = count
+        self.deviation = deviation
+        self.id = id
 
 class ResNet(nn.Module):
     def __init__(self, in_channels, out_channels):
