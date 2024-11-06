@@ -6,7 +6,7 @@ from ultralytics import YOLO
 from torchvision import transforms
 
 class KeypointsEstimator:
-    def __init__(self,camera_info,keypoints_path,yolo):
+    def __init__(self,camera_info,keypoints_path):
         self.model_keypoints = KeyPoints_Net()
         self.keypoints_net = self.model_keypoints.load_state_dict(torch.load(keypoints_path, map_location=torch.device('cuda')))
         self.model_keypoints.eval()
@@ -42,27 +42,13 @@ class KeypointsEstimator:
             keypoints_list.append(xy_imag)
         return keypoints_list
 
-    def get_boxes(self,result_f):
-        boundingbox_list=[]
-        conf_list=[]
-        label_list=[]
-        for l in result_f:
-            boxes = l.boxes
-            
-            for box in boxes:
-                
-                boundingbox_list.append(box.xyxy[0])
-                conf_list.append(box.conf[0])
-                label_list.append(box.cls[0])
-        
-        self.boundingbox_list=boundingbox_list
-        return boundingbox_list,conf_list,label_list
+    
 
-    def get_position_estimation(self, image):
+    def get_position_estimation(self, image,yolo_detections):
         cameraMatrix = self.camera_intrinsics
         bounding_boxes = self.yolo_model.predict(image)
 
-        boundingbox_list,conf_list,label_list = self.get_boxes(bounding_boxes)
+        boundingbox_list = yolo_detections
         keypoints = self.get_image_keypoints(boundingbox_list,image)
         cameraMatrix = np.array(cameraMatrix, dtype=np.float32)
 
@@ -75,7 +61,7 @@ class KeypointsEstimator:
             
             xy_imag = np.array([objects], dtype=np.float32)
             funciona,rvec,tvec= cv2.solvePnP(self.object3D_points, xy_imag, cameraMatrix, np.array(self.distortion),flags=0)
-            obstacles.append(Obstacle(tvec[0][0],tvec[2][0],conf_list[i].item(),label_list[i].item())) 
+            obstacles.append((tvec[0][0],tvec[2][0])) 
             rvec_list.append(rvec)
             tvec_list.append(tvec)
             
@@ -91,16 +77,7 @@ class KeypointsEstimator:
 
 
 
-class Obstacle:
 
-    def __init__(self, x, y, confidence, label,deviation=1e-15, count=1, id=0):
-        self.x = x
-        self.y = y
-        self.confidence = confidence
-        self.label = label
-        self.count = count
-        self.deviation = deviation
-        self.id = id
 
 class ResNet(nn.Module):
     def __init__(self, in_channels, out_channels):

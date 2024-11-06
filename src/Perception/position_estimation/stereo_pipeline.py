@@ -11,9 +11,9 @@ class StereoPipeline:
 
 
     def get_object_position(self, img_left,img_right,yolo,keypoints_path):
-        keypoints = KeypointsEstimator(self.left_intrinsics,keypoints_path,yolo)
+        keypoints = KeypointsEstimator(self.left_intrinsics,keypoints_path)
         objects,timing,rvec_list,tvec_list=keypoints.get_position_estimation()
-        boundingboxes=keypoints.boundingbox_list
+        boundingboxes=yolo
         objec3D=keypoints.object3D_points
         ponto1,ponto2,ponto3,ponto4=self.transfer_detection(tvec_list,rvec_list,boundingboxes,objec3D)
         box_left=[ponto3,ponto4]
