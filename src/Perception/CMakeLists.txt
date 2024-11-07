@@ -30,7 +30,13 @@ install(
 
 install(
         DIRECTORY
-        position_estimation/
+        position_estimation
+        DESTINATION lib/${PROJECT_NAME}
+)
+install(
+        PROGRAMS
+        position_estimation/stereo_pipeline.py
+        position_estimation/keypoints_estimator.py
         DESTINATION lib/${PROJECT_NAME}
 )
 

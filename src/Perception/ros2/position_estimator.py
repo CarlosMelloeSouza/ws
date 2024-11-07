@@ -10,8 +10,7 @@ from message_filters import Subscriber, ApproximateTimeSynchronizer
 
 from yolov8_msgs.msg import InferenceResult
 from yolov8_msgs.msg import Yolov8Inference
-#from fs_msgs.msg import Cone
-from Perception.position_estimation.stereo_pipeline import StereoPipeline
+from position_estimation.stereo_pipeline import StereoPipeline
 
 bridge = CvBridge()
 keypoints_path="/home/carlosmello/ws/src/Perception/position_estimation/keypoints_net_v1-1.pt"
