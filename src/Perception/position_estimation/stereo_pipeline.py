@@ -4,8 +4,8 @@ import numpy as np
 
 class StereoPipeline:
     def __init__(self,cam_left_info,cam_right_info):
-        self.left_intrinsics=cam_left_info.std_msgs.k
-        self.right_intrinsics=cam_right_info.std_msgs.k
+        self.left_intrinsics=cam_left_info.header.k
+        self.right_intrinsics=cam_right_info.header.k
         self.sift = cv2.SIFT.create()
         self.bf = cv2.BFMatcher()
 
