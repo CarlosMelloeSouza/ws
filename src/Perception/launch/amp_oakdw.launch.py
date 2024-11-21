@@ -6,6 +6,13 @@ from launch.actions import DeclareLaunchArgument
 from launch.actions import ExecuteProcess
 
 def generate_launch_description():
+    left = "fsds_left"
+    right = "fsds_right"
+    
+    cam_0_camera_info_url = PathJoinSubstitution([FindPackageShare('spinnaker_camera_driver'), 'config',
+                                                  left+'.yaml'])
+    cam_1_camera_info_url = PathJoinSubstitution([FindPackageShare('spinnaker_camera_driver'), 'config',
+                                                  right+'.yaml'])
     return LaunchDescription([
         Node(
             package='Perception',

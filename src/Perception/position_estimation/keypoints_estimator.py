@@ -2,11 +2,13 @@ import cv2
 import torch.nn as nn
 import numpy as np
 import torch
+from PIL import Image
 from ultralytics import YOLO
 from torchvision import transforms
 
 class KeypointsEstimator:
-    def __init__(self,camera_info,keypoints_path):
+    def __init__(self,camera_info,keypoints_path,distortion):
+        self.camera_distortion= distortion
         self.model_keypoints = KeyPoints_Net()
         self.keypoints_net = self.model_keypoints.load_state_dict(torch.load(keypoints_path, map_location=torch.device('cuda')))
         self.model_keypoints.eval()
@@ -18,12 +20,15 @@ class KeypointsEstimator:
     def get_image_keypoints(self,boundingbox_list,image):
         keypoints_list=[]
         
+        
+        
         for box in boundingbox_list:
-            x1,y1 = int(box[0]),int(box[1])
-            x2,y2 = int(box[2]),int(box[3])
+            x1,y1 = int(box.left),int(box.top)
+            x2,y2 = int(box.right),int(box.bottom)
+            
             crop = image[y1:y2,x1:x2]
             imagem_redimencionada=cv2.resize(crop,(80,80))
-            im = image.fromarray(cv2.cvtColor(imagem_redimencionada, cv2.COLOR_BGR2RGB))
+            im = Image.fromarray(cv2.cvtColor(imagem_redimencionada, cv2.COLOR_BGR2RGB))
             test_transforms = transforms.Compose([transforms.Resize((80, 80)), transforms.ToTensor()])
             im = test_transforms(im)
             pytorch_image = im.unsqueeze(0).to('cuda')
@@ -46,7 +51,8 @@ class KeypointsEstimator:
 
     def get_position_estimation(self, image,yolo_detections):
         cameraMatrix = self.camera_intrinsics
-        bounding_boxes = self.yolo_model.predict(image)
+        
+        #bounding_boxes = self.yolo_model.predict(image)
 
         boundingbox_list = yolo_detections
         keypoints = self.get_image_keypoints(boundingbox_list,image)
@@ -60,15 +66,15 @@ class KeypointsEstimator:
         for i,objects in enumerate(keypoints):
             
             xy_imag = np.array([objects], dtype=np.float32)
-            funciona,rvec,tvec= cv2.solvePnP(self.object3D_points, xy_imag, cameraMatrix, np.array(self.distortion),flags=0)
+            funciona,rvec,tvec= cv2.solvePnP(self.object3D_points, xy_imag, cameraMatrix, np.array([]),flags=0)
             obstacles.append((tvec[0][0],tvec[2][0])) 
             rvec_list.append(rvec)
             tvec_list.append(tvec)
             
             
             
-        timing=self.get_timing()
-        return obstacles,timing,rvec_list,tvec_list
+        
+        return obstacles,rvec_list,tvec_list
 
 
 
