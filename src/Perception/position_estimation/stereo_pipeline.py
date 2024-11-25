@@ -17,10 +17,10 @@ class StereoPipeline:
         boundingboxes=yolo
         objec3D=keypoints.object3D_points
         ponto1,ponto2,ponto3,ponto4=self.transfer_detection(tvec_list,rvec_list,boundingboxes,objec3D)
+        box_right=[ponto1,ponto2]
         box_left=[ponto3,ponto4]
-        box_rigth=[ponto1,ponto2]
 
-        good_points_left,good_points_right=self.SIFT_and_Matcher(box_left,box_rigth,img_left,img_right)
+        good_points_left,good_points_right=self.SIFT_and_Matcher(box_left,box_right,img_left,img_right)
         objects= self.triangulation(good_points_left,good_points_right)
         return objects
     
@@ -40,26 +40,42 @@ class StereoPipeline:
     
             xyxy=(boundingboxes[i])
             
-            altura=int(xyxy.left-xyxy.top)
-            largura=int(xyxy.right-xyxy.bottom)
-            ponto1 = (int(centrobb[0] - altura/2), int(centrobb[1] - largura/2))
-            ponto2 = (int(centrobb[0] + altura/2), int(centrobb[1] + largura/2))
-            ponto3 = (int(xyxy.left),int(xyxy.top))
-            ponto4 = (int(xyxy.right),int(xyxy.bottom))        
+            
+            altura=int(xyxy.top-xyxy.bottom)
+            largura=int(xyxy.left-xyxy.right)
+            ponto1 = (int(centrobb[0] + altura/2), int(centrobb[1] + largura/2))
+            ponto2 = (int(centrobb[0] - altura/2), int(centrobb[1] - largura/2))
+            ponto3 = (int(xyxy.top),int(xyxy.left))
+            ponto4 = (int(xyxy.bottom),int(xyxy.right))
+                    
 
         return ponto1,ponto2,ponto3,ponto4
     
-    def SIFT_and_Matcher(self,pontos_left,pontos_right,img_left,img_right):
+    def SIFT_and_Matcher(self,pontos_right,pontos_left,img_left,img_right):
         raw_img_left=img_left
         raw_img_right=img_right
-        ponto3,ponto4=pontos_left
-        ponto1,ponto2=pontos_right
-        x1l,y1l = ponto3
-        x2l,y2l = ponto4
+        ponto1,ponto2=pontos_left
+        ponto3,ponto4=pontos_right
+        
+        x1l,y1l = ponto1
+        
+        x2l,y2l = ponto2
+        
+        x1r,y1r = ponto3
+        
+        x2r,y2r = ponto4
+        
+        
+        
+
         img_left = img_left[y1l:y2l,x1l:x2l]
-        x1r,y1r = ponto1
-        x2r,y2r = ponto2
-        img_right= img_right[y2r:y1r,x2r:x1r]
+        img_right= img_right[y1r:y2r,x1r:x2r]
+        #cv2.rectangle(raw_img_left,(x1l,y1l),(x2l,y2l),(0,255,0),3)
+        cv2.imshow('img left',img_left)
+        #cv2.rectangle(raw_img_right,(x1r,y1r),(x2r,y2r),(0,255,0),3)
+        cv2.imshow('img right',img_right)
+        
+        cv2.waitKey(0)
         kp1, des1 = self.sift.detectAndCompute(img_left,None)
         kp2, des2 = self.sift.detectAndCompute(img_right,None)
     
@@ -71,7 +87,7 @@ class StereoPipeline:
 
         good = []
         for m, n in matches:
-            if m.distance < 0.9 * n.distance:  
+            if m.distance < 0.7 * n.distance:  
                 good.append([m])
         if good:
             good=good[0]
@@ -99,11 +115,11 @@ class StereoPipeline:
         P2 = np.dot(K2, RT2)
         print(points1)
         print(points2)
-        if points1 and points2:
-            obj = cv2.triangulatePoints(P1, P2, points1, points2)   
-            obj = [obj[0]/obj[3],obj[1]/obj[3],obj[2]/obj[3]]
-            return obj
-        else:
-            return []
+        
+        obj = cv2.triangulatePoints(P1, P2, points1, points2)   
+        obj = [obj[0]/obj[3],obj[1]/obj[3],obj[2]/obj[3]]
+        return obj
+        
+            
 
         

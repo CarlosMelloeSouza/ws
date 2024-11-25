@@ -23,8 +23,8 @@ class KeypointsEstimator:
         
         
         for box in boundingbox_list:
-            x1,y1 = int(box.left),int(box.top)
-            x2,y2 = int(box.right),int(box.bottom)
+            x1,y1 = int(box.top),int(box.left)
+            x2,y2 = int(box.bottom),int(box.right)
             
             crop = image[y1:y2,x1:x2]
             imagem_redimencionada=cv2.resize(crop,(80,80))
