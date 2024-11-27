@@ -16,13 +16,13 @@ class Camera_subscriber(Node):
     def __init__(self):
         super().__init__('camera_subscriber')
 
-        self.model = YOLO('/home/carlosmello/ws/src/yolobot_recognition/scripts/best_nano.pt')
+        self.model = YOLO('/home/carlosmello/ws/src/yolobot_recognition/scripts/best.pt')
 
         self.yolov8_inference = Yolov8Inference()
 
         self.subscription = self.create_subscription(
             Image,
-            '/fsds/cameracam1/image_color',
+            '/fsds/cameracam2/image_color',
             self.camera_callback,
             10)
         self.subscription 

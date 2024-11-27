@@ -4,7 +4,7 @@ import numpy as np
 
 class StereoPipeline:
     def __init__(self,cam_left_info,cam_right_info):
-        self.left_intrinsics=cam_left_info['camera_matrix']['data']
+        self.left_intrinsics=cam_left_info['rectification_matrix']['data']
         self.camera_distortion=cam_left_info['distortion_coefficients']['data']
         self.right_intrinsics=cam_right_info['camera_matrix']['data']
         self.sift = cv2.SIFT.create()
@@ -16,7 +16,7 @@ class StereoPipeline:
         objects,rvec_list,tvec_list=keypoints.get_position_estimation(img_left,yolo)
         boundingboxes=yolo
         objec3D=keypoints.object3D_points
-        ponto1,ponto2,ponto3,ponto4=self.transfer_detection(tvec_list,rvec_list,boundingboxes,objec3D)
+        ponto1,ponto2,ponto3,ponto4=self.transfer_detection(tvec_list,rvec_list,boundingboxes,objec3D,img_left,img_right)
         box_right=[ponto1,ponto2]
         box_left=[ponto3,ponto4]
 
@@ -25,7 +25,7 @@ class StereoPipeline:
         return objects
     
     
-    def transfer_detection(self,tvec_list,rvec_list,boundingboxes,object3D):
+    def transfer_detection(self,tvec_list,rvec_list,boundingboxes,object3D,img_left,img_right):
         for i,tvec in enumerate(tvec_list):
             soma_x=0
             soma_y=0
@@ -47,6 +47,12 @@ class StereoPipeline:
             ponto2 = (int(centrobb[0] - altura/2), int(centrobb[1] - largura/2))
             ponto3 = (int(xyxy.top),int(xyxy.left))
             ponto4 = (int(xyxy.bottom),int(xyxy.right))
+            cv2.rectangle(img_left,(ponto3),(ponto4),(0,255,0),3)
+            cv2.imshow('img left',img_left)
+            cv2.rectangle(img_right,(ponto1),(ponto2),(0,255,0),3)
+            cv2.imshow('img right',img_right)
+        
+            cv2.waitKey(0)
                     
 
         return ponto1,ponto2,ponto3,ponto4
@@ -70,12 +76,7 @@ class StereoPipeline:
 
         img_left = img_left[y1l:y2l,x1l:x2l]
         img_right= img_right[y1r:y2r,x1r:x2r]
-        #cv2.rectangle(raw_img_left,(x1l,y1l),(x2l,y2l),(0,255,0),3)
-        cv2.imshow('img left',img_left)
-        #cv2.rectangle(raw_img_right,(x1r,y1r),(x2r,y2r),(0,255,0),3)
-        cv2.imshow('img right',img_right)
         
-        cv2.waitKey(0)
         kp1, des1 = self.sift.detectAndCompute(img_left,None)
         kp2, des2 = self.sift.detectAndCompute(img_right,None)
     
