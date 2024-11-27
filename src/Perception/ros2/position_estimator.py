@@ -10,6 +10,7 @@ from message_filters import Subscriber, ApproximateTimeSynchronizer
 
 from yolov8_msgs.msg import InferenceResult
 from yolov8_msgs.msg import Yolov8Inference
+from stereo_msgs.msg._disparity_image import DisparityImage
 from position_estimation.stereo_pipeline import StereoPipeline
 import yaml
 
@@ -28,7 +29,7 @@ class PositionEstimator(Node):
         self.get_logger().info(f'A')
         self.cont=0
 
-        
+        self.disparity_sub = Subscriber(self,DisparityImage,"/sm2/disparity/disparity_image")
         self.detections_sub = Subscriber(self, Yolov8Inference, "/Yolov8_Inference")
         self.image_left_sub = Subscriber(self, Image, "/fsds/cameracam2/image_color")
         self.image_right_sub = Subscriber(self, Image, "/fsds/cameracam1/image_color")
