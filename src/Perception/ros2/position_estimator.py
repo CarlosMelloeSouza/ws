@@ -7,11 +7,13 @@ from sensor_msgs.msg import Image, CameraInfo
 from cv_bridge import CvBridge
 
 from message_filters import Subscriber, ApproximateTimeSynchronizer
-
+from fs_msgs.msg import Track
+from fs_msgs.msg import Cone
 from yolov8_msgs.msg import InferenceResult
 from yolov8_msgs.msg import Yolov8Inference
 from stereo_msgs.msg._disparity_image import DisparityImage
 from position_estimation.stereo_pipeline import StereoPipeline
+from position_estimation.disparity_estimator import DisparityEstimator
 import yaml
 
 bridge = CvBridge()
@@ -23,58 +25,39 @@ class PositionEstimator(Node):
 
     def __init__(self):
         super().__init__('position_estimator')
-        self.att_camera_left_info=True
-        self.att_camera_right_info=True
-
-        self.get_logger().info(f'A')
-        self.cont=0
+        
 
         self.disparity_sub = Subscriber(self,DisparityImage,"/sm2/disparity/disparity_image")
         self.detections_sub = Subscriber(self, Yolov8Inference, "/Yolov8_Inference")
         self.image_left_sub = Subscriber(self, Image, "/fsds/cameracam2/image_color")
         self.image_right_sub = Subscriber(self, Image, "/fsds/cameracam1/image_color")
-        #self.image_left = self.create_subscription(
-         #   Image,
-          #  '/fsds/cameracam2/image_color',
-           # self.time_sync,
-            #10
-        #)
+        self.publishers_ = self.create_publisher(Track, '/position_estimation/track',10)
+        
         
         queue_size = 10
         max_delay = 1
-        self.time_sync = ApproximateTimeSynchronizer([self.image_left_sub,self.image_right_sub,self.detections_sub],queue_size,max_delay)
+        self.time_sync = ApproximateTimeSynchronizer([self.image_left_sub,self.detections_sub,self.disparity_sub],queue_size,max_delay)
         self.time_sync.registerCallback(self.sync_callback)
         
-        self.get_logger().info(f'A2')
 
         with open(left_path) as arquivo:
             self.left_camera_info = yaml.load(arquivo, Loader=yaml.FullLoader)
 
         with open(right_path) as arquivo:
             self.right_camera_info = yaml.load(arquivo,Loader=yaml.FullLoader)
+        self.disparity=DisparityEstimator(self.left_camera_info)
         
 
-    def sync_callback(self, img_left,img_right,yolo_result):
-        self.get_logger().info(f'A3')
+    def sync_callback(self, img_left,yolo_result,disp_map):
+
         
-        
-        self.vision_pipeline=StereoPipeline(self.left_camera_info,self.left_camera_info)
-        img_left_temp = img_left.header.stamp.sec
-        img_right_temp = img_right.header.stamp.sec
-        det_temp = yolo_result.header.stamp.sec
+        cv2disp_map=bridge.imgmsg_to_cv2(disp_map.image)
         cv2img_left=bridge.imgmsg_to_cv2(img_left)
-        cv2img_right=bridge.imgmsg_to_cv2(img_right)
-        objects=self.vision_pipeline.get_object_position(cv2img_left,cv2img_right,yolo_result.yolov8_inference,keypoints_path)
-        self.get_logger().info(f'cone position: {objects}')
+        
+        track=self.disparity.get_object_on_map(cv2img_left,cv2disp_map,yolo_result.yolov8_inference,disp_map.t,disp_map.f)
+        self.publishers_.publish(track)
 
-    def camera_left_callback(self,msg):
-        self.get_logger().info(f'A3')
-        self.att_camera_left_info=True
-        self.left_camera_info=msg
-    def camera_right_callback(self,msg):
-        self.get_logger().info(f'A4')
-        self.att_camera_right_info=True
-        self.right_camera_info=msg
+    
         
     
     
