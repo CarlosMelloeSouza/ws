@@ -23,6 +23,12 @@ install(
 )
 
 install(
+        PROGRAMS
+        ros2/camera_info_pub.py
+        DESTINATION lib/${PROJECT_NAME}
+)
+
+install(
         DIRECTORY
         stereo_camera/
         DESTINATION lib/${PROJECT_NAME}
@@ -33,6 +39,7 @@ install(
         position_estimation
         DESTINATION lib/${PROJECT_NAME}
 )
+
 install(
         PROGRAMS
         position_estimation/stereo_pipeline.py

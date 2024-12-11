@@ -3,9 +3,11 @@
 from ultralytics import YOLO
 import rclpy
 from rclpy.node import Node
+import rclpy.time
 from sensor_msgs.msg import Image, CameraInfo
 from cv_bridge import CvBridge
-
+from std_msgs.msg import Header
+from sensor_msgs.msg import PointCloud2, PointField
 from message_filters import Subscriber, ApproximateTimeSynchronizer
 from fs_msgs.msg import Track
 from fs_msgs.msg import Cone
@@ -13,6 +15,7 @@ from yolov8_msgs.msg import InferenceResult
 from yolov8_msgs.msg import Yolov8Inference
 from stereo_msgs.msg._disparity_image import DisparityImage
 from position_estimation.stereo_pipeline import StereoPipeline
+import sensor_msgs_py.point_cloud2 as pc2
 from position_estimation.disparity_estimator import DisparityEstimator
 import yaml
 
@@ -32,6 +35,7 @@ class PositionEstimator(Node):
         self.image_left_sub = Subscriber(self, Image, "/fsds/cameracam2/image_color")
         self.image_right_sub = Subscriber(self, Image, "/fsds/cameracam1/image_color")
         self.publishers_ = self.create_publisher(Track, '/position_estimation/track',10)
+        self.publishers_point_clound = self.create_publisher(PointCloud2, '/position_estimation/point_clound',10)
         
         
         queue_size = 10
@@ -56,8 +60,38 @@ class PositionEstimator(Node):
         
         track=self.disparity.get_object_on_map(cv2img_left,cv2disp_map,yolo_result.yolov8_inference,disp_map.t,disp_map.f)
         self.publishers_.publish(track)
+        pointclound=self.track_to_point_cloud(track)
+        self.publishers_point_clound.publish(pointclound)
 
     
+    def track_to_point_cloud(self,track_msg):
+        header = Header()
+        header.stamp = self.get_clock().now().to_msg()
+        header.frame_id = "/down"  # Ajuste para o frame de referência correto
+
+        points = []
+        for cone in track_msg.track:  # Supondo que track_msg.tracks é a lista de rastreamentos
+            x = cone.location.x
+            y = cone.location.y
+            z = cone.location.z
+            points.append([x, y, z])
+
+    # Define os campos da nuvem de pontos
+        fields = [
+            PointField(name='x', offset=0, datatype=PointField.FLOAT32, count=1),
+            PointField(name='y', offset=4, datatype=PointField.FLOAT32, count=1),
+            PointField(name='z', offset=8, datatype=PointField.FLOAT32, count=1)
+            
+        ]
+        
+
+    # Cria a mensagem PointCloud2
+        pointcloud_msg = pc2.create_cloud(header, fields, points)
+        return pointcloud_msg
+    
+    
+    
+
         
     
     
